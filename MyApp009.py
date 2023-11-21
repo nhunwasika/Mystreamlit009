@@ -50,3 +50,10 @@ html_3 = """
 """
 st.markdown(html_3, unsafe_allow_html=True)
 st.markdown("")
+
+s1 = st.number_input("กรุณาเลือกข้อมูล Age", step=1, format="%d")
+s2 = st.number_input("กรุณาเลือกข้อมูล FrequentFlyer", step=1, format="%d")
+s3 = st.number_input("กรุณาเลือกข้อมูล AnnualIncomeClass", step=1, format="%d")
+s4 = st.number_input("กรุณาเลือกข้อมูล ServicesOpted", step=1, format="%d")
+s5 = st.number_input("กรุณาเลือกข้อมูล AccountSyncedToSocialMedia", step=1, format="%d")
+s6 = st.number_input("กรุณาเลือกข้อมูล BookedHotelOrNot", step=1, format="%d")
