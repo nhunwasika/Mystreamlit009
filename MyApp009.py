@@ -14,7 +14,7 @@ with col1:
     #st.image('./pic/pic2.jpg')
 
 html_1 = """
-<div style="background-color:#52BE80;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<div style="background-color:#ccccff;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
 <center><h5>ข้อมูลของลูกค้าทัวร์</h5></center>
 </div>
 """
