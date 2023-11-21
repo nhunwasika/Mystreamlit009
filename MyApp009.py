@@ -25,3 +25,11 @@ import pandas as pd
 
 raw_data=pd.read_csv('./data/Tour_Travel.csv')
 st.write(raw_data.head(10))
+
+html_2 = """
+<div style="background-color:#FF66CC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>การวิเคราะห์การยกเลิกใช้บริการลูกค้าทัวร์</h5></center>
+</div>
+"""
+st.markdown(html_2, unsafe_allow_html=True)
+st.markdown("")
