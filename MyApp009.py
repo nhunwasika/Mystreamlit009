@@ -42,3 +42,11 @@ raw_data["AccountSyncedToSocialMedia"]=le.fit_transform(raw_data["AccountSyncedT
 raw_data["BookedHotelOrNot"]=le.fit_transform(raw_data["BookedHotelOrNot"])
 
 st.write(raw_data.head(10))
+
+html_3 = """
+<div style="background-color:#FF6666;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>การจำแนกคลาสการยกเลิกใช้งาน</h5></center>
+</div>
+"""
+st.markdown(html_3, unsafe_allow_html=True)
+st.markdown("")
