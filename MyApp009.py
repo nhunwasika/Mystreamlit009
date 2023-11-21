@@ -28,7 +28,7 @@ st.write(raw_data.head(10))
 
 html_2 = """
 <div style="background-color:#FF99CC;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h5>การวิเคราะห์การยกเลิกใช้บริการลูกค้าทัวร์</h5></center>
+<center><h5>แปลงข้อมูล</h5></center>
 </div>
 """
 st.markdown(html_2, unsafe_allow_html=True)
