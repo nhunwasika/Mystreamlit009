@@ -33,3 +33,10 @@ html_2 = """
 """
 st.markdown(html_2, unsafe_allow_html=True)
 st.markdown("")
+
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+raw_data["FrequentFlyer"]= le.fit_transform(t_data["FrequentFlyer"])
+raw_data["AnnualIncomeClass"]=le.fit_transform(t_data["AnnualIncomeClass"])
+raw_data["AccountSyncedToSocialMedia"]=le.fit_transform(t_data["AccountSyncedToSocialMedia"])
+raw_data["BookedHotelOrNot"]=le.fit_transform(t_data["BookedHotelOrNot"])
