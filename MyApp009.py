@@ -57,3 +57,31 @@ s3 = st.number_input("กรุณาเลือกข้อมูล AnnualInc
 s4 = st.number_input("กรุณาเลือกข้อมูล ServicesOpted", step=1, format="%d")
 s5 = st.number_input("กรุณาเลือกข้อมูล AccountSyncedToSocialMedia", step=1, format="%d")
 s6 = st.number_input("กรุณาเลือกข้อมูล BookedHotelOrNot", step=1, format="%d")
+
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+import numpy as np
+
+if st.button("ทำนายผล"):
+    X= raw_data.drop(columns='LeaveOrNot')
+    y=raw_data['LeaveOrNot']
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=3, test_size=0.25)
+
+    dt_model = DecisionTreeClassifier()
+    dt_model.fit(X, y)
+
+    x_input = np.array([[s1, s2, s3, s4, s5, s6 ]])
+    st.write(dt_model.predict(x_input))
+    out=dt_model.predict(x_input)
+
+    
+    if out[0]== 0:
+     st.header("ใช้บริการ")
+    elif out[0]== 1:
+      st.header("เปลี่ยนใจ")
+      st.button("ไม่ทำนายผล")
+else :
+ st.button("ไม่ทำนายผล")
+
+    
